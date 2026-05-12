@@ -1,0 +1,36 @@
+server:
+  port: 18092
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+    sentinel:
+      transport:
+        dashboard: localhost:8080
+        port: 8719
+  zipkin:
+    base-url: http://127.0.0.1:9411
+    sender:
+      type: web
+    discovery-client-enabled: true
+  sleuth:
+    sampler:
+      probability: 1
+  redis:
+    host: 192.168.44.128
+  thymeleaf:
+    cache: false
+  rabbitmq:
+    host: 192.168.44.128
+    virtual-host: /ZJC
+    username: ZJC
+    password: ZJC
+    publisher-confirm-type: CORRELATED
+    publisher-returns: true
+feign:
+  sentinel:
+    enabled: true
+jwt:
+  pubKeyPath: D:\project-0821\rsa\rsa.pub
+  cookieName: GMALL-TOKEN

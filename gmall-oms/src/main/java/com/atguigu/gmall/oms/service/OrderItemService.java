@@ -1,0 +1,21 @@
+package com.atguigu.gmall.oms.service;
+
+import com.baomidou.mybatisplus.extension.service.IService;
+import com.atguigu.gmall.common.bean.PageResultVo;
+import com.atguigu.gmall.common.bean.PageParamVo;
+import com.atguigu.gmall.oms.entity.OrderItemEntity;
+
+import java.util.Map;
+
+/**
+ * 订单项信息
+ *
+ * @author ZJC
+ * @email 1206904379@qq.com
+ * @date 2026-03-27 15:30:47
+ */
+public interface OrderItemService extends IService<OrderItemEntity> {
+
+    PageResultVo queryPage(PageParamVo paramVo);
+}
+
